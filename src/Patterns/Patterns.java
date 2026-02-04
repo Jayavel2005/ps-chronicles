@@ -395,5 +395,70 @@ public class Patterns {
         }
     }
 
+    public static void pattern24(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (i == 1 || i == n || j == 1 || j == n) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+//           ******
+//           *    *
+//           *    *
+//           ******
+//Hollow Rectangle Star Pattern
+
+    public static void pattern25(int row, int col) {
+        for (int i = 1; i <= row; i++) {
+            for (int j = 1; j <= col; j++) {
+                if (i == 1 || j == 1 || j == col || i == row) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+
+            }
+            System.out.println();
+        }
+    }
+
+//           10987
+//           456
+//           32
+//           1
+//Basic Right Triangle Number Pattern (Inverted)
+
+    public static void pattern26(int n) {
+        int count = 10;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= (n - i) + 1; j++) {
+                System.out.print(count--);
+            }
+            System.out.println();
+        }
+    }
+
+    //           1*2*3*4
+//           5*6*7*8
+//           9*10*11*12
+//           13*14*15*16
+//Basic incrementing Squared Number-Star Pattern
+    public static void pattern27(int n) {
+        int count = 1;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (j != n) {
+                    System.out.print(count++ + "*");
+                } else {
+                    System.out.print(count++);
+                }
+
+            }
 
 }
