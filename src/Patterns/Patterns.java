@@ -7,7 +7,7 @@ public class Patterns {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 //      int n = in.nextInt();
-//      pattern1(n)
+//      pattern1(n)'
 //      pattern2(n);
 
 //        pattern3(in.nextInt(), in.nextInt());
@@ -33,8 +33,12 @@ public class Patterns {
 //        pattern20(in.nextInt());
 //        pattern21(in.nextInt());
 //        pattern22(in.nextInt());
-        pattern23(in.nextInt());
-
+//        pattern23(in.nextInt());
+//        pattern24(in.nextInt());
+//        pattern25(in.nextInt(), in.nextInt());
+//        pattern26(in.nextInt());
+//        pattern27(in.nextInt());
+        zoho1(in.nextInt());
     }
 
 
@@ -461,4 +465,45 @@ public class Patterns {
 
             }
 
+            System.out.println();
+        }
+    }
+
+    //    zoho pattern 1
+    public static void zoho1(int n) {
+        int half = (n + 1) / 2;
+        for (int i = 1; i <= n; i++) {
+            int spaces = (i <= half) ? half - i : i - half - 1;
+            int stars = (i <= half) ? i : n - i + 1;
+            for (int s = 1; s <= spaces; s++) {
+                System.out.print("  ");
+            }
+            for (int j = stars; j >= 1; j--) {
+                if (i <= half) {
+                    if ((i + j) % 2 == 0) {
+                        System.out.print("1 ");
+                    } else System.out.print("* ");
+                } else {
+                    if ((i + j) % 2 != 0) {
+                        System.out.print("1 ");
+                    } else System.out.print("* ");
+                }
+            }
+//            mirror
+            int mstars = (i <= half) ? i : (n - i) + 1;
+            for (int j = 1; j <= mstars; j++) {
+                if (i <= half) {
+                    if ((i + j) % 2 == 0) {
+                        System.out.print("1 ");
+                    } else System.out.print("* ");
+                } else {
+                    if ((i + j) % 2 != 0) {
+                        System.out.print("1 ");
+                    } else System.out.print("* ");
+                }
+            }
+            System.out.println();
+        }
+
+    }
 }
