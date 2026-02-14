@@ -7,12 +7,17 @@ public class Main {
 //        System.out.println(box.h + " " + box.w + " " + box.l);
 
 
-        BoxPrice box = new BoxPrice(2,4,6,56,199);
+//        BoxPrice box = new BoxPrice(2,4,6,56,199);
+//
+//        Box box1 = new BoxPrice(1,2,3,4,5);
+////        System.out.println(box1.information());
+//
+//        BoxWeight box2 = new BoxPrice(1,2,3,4,5);
+//        box1.information();
 
-        Box box1 = new BoxPrice(1,2,3,4,5);
-//        System.out.println(box1.information());
+        Red red = new Red();
+        red.color();
 
-        BoxWeight box2 = new BoxPrice(1,2,3,4,5);
-        box1.information();
+
     }
 }
