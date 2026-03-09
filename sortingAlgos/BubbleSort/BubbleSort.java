@@ -17,6 +17,8 @@ public class BubbleSort {
 
         System.out.println(Arrays.toString(arr));
 
+        in.close();
+
     }
 
     static void bubbleSort(int[] arr){
